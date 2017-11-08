@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TextureDemo</string>
+    <string name="action_settings">Settings</string>
+    <string name="storage_permission_needed">We need the Storage permission to read video for displaying.</string>
+</resources>
