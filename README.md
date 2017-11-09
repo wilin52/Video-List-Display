@@ -6,4 +6,4 @@ All the code about OpenGL is copy from https://github.com/ChouRay/PlayVideo-Open
 
 TODO： display video with http url. 
 
-<img src="ccreenshot.gif"  height="400" alt="screenshot"/> 
+<img src="screenshot.gif"  height="400" alt="screenshot"/> 
