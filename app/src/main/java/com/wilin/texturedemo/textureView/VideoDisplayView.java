@@ -190,19 +190,18 @@ public class VideoDisplayView extends FrameLayout implements TextureView.Surface
 
                     mediaPlayer.prepareAsync();
                     mediaPlayer.setLooping(true);
+                    mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                        @Override
+                        public void onPrepared(MediaPlayer mp) {
+                            mediaPlayer.start();
+                        }
+                    });
                 } catch (IllegalArgumentException | SecurityException |
                         IllegalStateException | IOException e) {
                     exited = true;
                     e.printStackTrace();
                 }
 
-                try {
-                    Thread.sleep(100);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-
-                mediaPlayer.start();
                 synchronized (threadManager) {
                     while (!exited) {
                         try {
